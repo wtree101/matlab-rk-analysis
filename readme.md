@@ -1,6 +1,6 @@
-# RK Phase Diagram Analysis
+# QRK Analysis
 
-MATLAB implementation for analyzing and comparing different variants of the Quantile-based Randomized Kaczmarz (QRK) algorithm.
+MATLAB implementation for analyzing and comparing the Quantile-based Randomized Kaczmarz (QRK) algorithm with different parameters.
 
 ## Overview
 
