@@ -1,0 +1,21 @@
+# MATLAB temporary files
+*.asv
+*.autosave
+
+# Large data files (optional)
+*.mat
+data/
+data_*/
+
+# Generated figures
+*.eps
+*.png
+*.pdf
+figs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
