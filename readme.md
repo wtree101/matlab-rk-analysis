@@ -181,8 +181,8 @@ subdir = sprintf('your_data_directory/n_%d_m_%d_beta_%.4f...', ...);
 ## Expected Results
 
 ### Typical Behavior
-- **Lower D values**: Faster initial convergence
-- **Higher D values**: Better final accuracy
+- **Lower D values**: Faster computation
+- **Higher D values**: More robust
 - **Standard RK (D=0)**: Baseline performance
 - **Time vs Iteration**: Different computational efficiency patterns
 
