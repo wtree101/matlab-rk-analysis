@@ -1,21 +1,22 @@
 # RK Phase Diagram Analysis
 
-MATLAB implementation for analyzing and comparing different variants of the Regularized Kaczmarz (RK) algorithm using quantile-based robust regression.
+MATLAB implementation for analyzing and comparing different variants of the Quantile-based Randomized Kaczmarz (QRK) algorithm.
 
 ## Overview
 
-This project implements robust linear system solvers using quantile regression and analyzes their convergence behavior across different corruption levels and algorithm parameters. The main focus is on comparing the performance of different RK variants through phase diagram analysis.
+This project implements robust linear system solvers using quantile regression and analyzes their convergence behavior across different corruption levels and algorithm parameters. The main focus is on comparing the performance of different quantile subsampled size D, corruption level beta, and the number of iterations T.
 
 ## Files
 
 ### Main Scripts
 - **`draw_compare.m`** - Primary visualization script for comparing different D values and generating publication-quality plots
-- **`Phasediagram_T.m`** - Phase diagram generation with temperature variation analysis
-- **`Phasediagram_T_beta.m`** - Multi-beta phase diagram analysis
+- **`compare_efficiency.m`** - Run experiments and save data
+<!-- - **`Phasediagram_T.m`** - D-T phase diagram analysis
+- **`Phasediagram_T_beta.m`** - D-beta phase diagram analysis -->
 
 ### Supporting Functions
-- **`multipletrial.m`** - Single trial execution framework
-- **`multipletrial_T.m`** - Multiple trial execution with temperature variation
+- **`multipletrial_T.m`** - Multiple trial execution recording error, time and successful rate.
+- **`quantileRK.m`** - Implementation of QRK.
 
 ## Key Parameters
 
@@ -98,7 +99,7 @@ error_vs_time_q_0.5000_beta_0.0100_D_4_8_12_0.png
 
 ## Data Directory Structure
 
-### Input Data Location
+### Output Data Location
 ```
 data_2/n_100_m_50000_beta_0.0100_q_0.50_theoryQ_1_repl_1/
 ├── D_4_lnT_9.9035_t_10_all.mat
@@ -107,9 +108,9 @@ data_2/n_100_m_50000_beta_0.0100_q_0.50_theoryQ_1_repl_1/
 └── D_0_lnT_9.9035_t_10_all.mat
 ```
 
-### Output Figures Location
+<!-- ### Output Figures Location
 ```
-/Users/wutong/Documents/LearningNote/PRKm/67dd28a13466e6105cc5e83d/PR_quantile/figs/
+/Users/wutong/Documents/LearningNote/PRKm/67dd28a13466e6105cc5e83d/PR_quantile/figs/ -->
 ```
 
 ## Algorithm Details
@@ -120,8 +121,8 @@ data_2/n_100_m_50000_beta_0.0100_q_0.50_theoryQ_1_repl_1/
 - **Quantile-based**: Uses robust quantile regression instead of least squares
 
 ### Key Features
-- **Quantile regression**: More robust than least squares to outliers
-- **Configurable robustness**: Adjustable via `q` parameter
+- **Quantile RK: More robust than least squares to outliers
+- **Configurable robustness**: Adjustable via `q` `D` parameter
 - **Multiple trials**: Averages results over multiple independent runs
 - **Comprehensive comparison**: Side-by-side analysis of different variants
 
@@ -141,7 +142,7 @@ data_2/n_100_m_50000_beta_0.0100_q_0.50_theoryQ_1_repl_1/
 - White background for publication quality
 - Consistent color ordering between plots
 
-## Requirements
+<!-- ## Requirements
 
 ### MATLAB Toolboxes
 - Base MATLAB (R2018b or later)
@@ -151,7 +152,7 @@ data_2/n_100_m_50000_beta_0.0100_q_0.50_theoryQ_1_repl_1/
 ### System Requirements
 - 8GB+ RAM recommended for large problem sizes
 - Multi-core CPU for parallel processing
-- Sufficient disk space for figure outputs
+- Sufficient disk space for figure outputs -->
 
 ## Configuration
 
